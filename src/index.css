@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { scroll-behavior: smooth; }
+
+body {
+  background: #0A0A0A;
+  color: #F5F0E8;
+  font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.3); border-radius: 3px; }
+
+.gold-line { height: 1px; background: linear-gradient(90deg, transparent, #C9A84C, transparent); }
+
+.gold-text {
+  background: linear-gradient(135deg, #C9A84C 0%, #D4B96A 40%, #C9A84C 60%, #B8942E 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(245,240,232,0.06);
+  transition: all .4s cubic-bezier(.25,.46,.45,.94);
+}
+.card:hover {
+  background: rgba(201,168,76,0.03);
+  border-color: rgba(201,168,76,0.25);
+  transform: translateY(-4px);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #C9A84C, #B8942E);
+  color: #0A0A0A;
+  box-shadow: 0 0 30px -8px rgba(201,168,76,0.4);
+  transition: all .3s;
+}
+.btn-gold:hover { box-shadow: 0 0 50px -5px rgba(201,168,76,0.6); transform: translateY(-1px); }
+
+.btn-crimson {
+  background: #8B1A1A;
+  color: #F5F0E8;
+  transition: all .3s;
+}
+.btn-crimson:hover { background: #6B1010; }
+
+.btn-outline-gold {
+  border: 1px solid rgba(201,168,76,0.4);
+  color: #C9A84C;
+  transition: all .3s;
+}
+.btn-outline-gold:hover { background: rgba(201,168,76,0.08); border-color: #C9A84C; }
+
+.input-field {
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(245,240,232,0.08);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: #F5F0E8;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color .2s;
+}
+.input-field:focus { border-color: rgba(201,168,76,0.5); }
+.input-field::placeholder { color: #5A5550; }
+
+.label-field {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #9A9590;
+  display: block;
+  margin-bottom: 0.5rem;
+}
